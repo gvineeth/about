@@ -40,6 +40,238 @@
         ::-webkit-scrollbar-track { background: #f0f0f0; }
         ::-webkit-scrollbar-thumb { background: #4f46e5; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #3730a3; }
+
+        /* Animation Keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        /* Animation Classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Slide in left animation - overrides base transform */
+        .animate-on-scroll.slide-in-left {
+            transform: translateX(-30px) !important;
+        }
+
+        .animate-on-scroll.slide-in-left.animated {
+            transform: translateX(0) !important;
+        }
+
+        /* Slide in right animation - overrides base transform */
+        .animate-on-scroll.slide-in-right {
+            transform: translateX(30px) !important;
+        }
+
+        .animate-on-scroll.slide-in-right.animated {
+            transform: translateX(0) !important;
+        }
+
+        /* Scale in animation - overrides base transform */
+        .animate-on-scroll.scale-in {
+            transform: scale(0.9) !important;
+        }
+
+        .animate-on-scroll.scale-in.animated {
+            transform: scale(1) !important;
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* Fade in up for animate-on-scroll - overrides base transform */
+        .animate-on-scroll.fade-in-up {
+            transform: translateY(30px) !important;
+        }
+
+        .animate-on-scroll.fade-in-up.animated {
+            transform: translateY(0) !important;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+
+        .slide-in-right {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+
+        .scale-in {
+            animation: scaleIn 0.6s ease-out forwards;
+        }
+
+        /* Hero Section Animations */
+        .hero-image {
+            animation: fadeIn 1s ease-out 0.2s forwards, float 3s ease-in-out infinite 1.2s;
+            opacity: 0;
+        }
+
+        .hero-title {
+            animation: fadeInUp 1s ease-out 0.4s forwards;
+            opacity: 0;
+        }
+
+        .hero-subtitle {
+            animation: fadeInUp 1s ease-out 0.6s forwards;
+            opacity: 0;
+        }
+
+        .hero-description {
+            animation: fadeInUp 1s ease-out 0.8s forwards;
+            opacity: 0;
+        }
+
+        /* Skill Bar Animation */
+        .skill-bar {
+            transition: width 1.5s ease-out;
+        }
+
+        /* Stagger Animation Delays */
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        .stagger-5 { animation-delay: 0.5s; }
+        .stagger-6 { animation-delay: 0.6s; }
+
+        /* Header Scroll Animation */
+        header {
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        }
+
+        header.scrolled {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Enhanced Hover Effects */
+        .hover-lift {
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.2);
+        }
+
+        /* Project Card Hover Animation */
+        .project-card {
+            transition: all 0.3s ease-out;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px) scale(1.02);
+        }
+
+        /* Stat Card Animation */
+        .stat-card {
+            transition: all 0.3s ease-out;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        /* Timeline Entry Animation */
+        .timeline-entry {
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 0.6s ease-out 0.1s, transform 0.6s ease-out 0.1s;
+        }
+
+        .timeline-entry.animated {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Soft Skills Tag Animation */
+        .skill-tag {
+            transition: all 0.2s ease-out;
+        }
+
+        .skill-tag:hover {
+            transform: scale(1.1) translateY(-2px);
+        }
     </style>
 </head>
 <body class="min-h-screen bg-gray-50 font-sans flex flex-col text-gray-800">
@@ -161,16 +393,16 @@
                     <img
                         src="https://placehold.co/150x150/4f46e5/ffffff?text=VG"
                         alt="Profile"
-                        class="w-36 h-36 rounded-full border-4 border-indigo-600 mx-auto"
+                        class="hero-image w-36 h-36 rounded-full border-4 border-indigo-600 mx-auto"
                         onerror="this.onerror=null; this.src='https://placehold.co/150x150/4f46e5/ffffff?text=VG';"
                     />
-                    <div class="absolute bottom-0 right-0 p-2 bg-indigo-600 rounded-full border-4 border-gray-50 shadow-xl">
+                    <div class="absolute bottom-0 right-0 p-2 bg-indigo-600 rounded-full border-4 border-gray-50 shadow-xl scale-in">
                         <i data-lucide="code" class="w-5 h-5 text-white"></i>
                     </div>
                 </div>
-                <h1 class="text-6xl font-extrabold text-gray-900 mb-2">Vineetkumar Gorkanti</h1>
-                <p class="text-2xl text-indigo-700 font-medium mb-6">Software Developer</p>
-                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                <h1 class="hero-title text-6xl font-extrabold text-gray-900 mb-2">Vineetkumar Gorkanti</h1>
+                <p class="hero-subtitle text-2xl text-indigo-700 font-medium mb-6">Software Developer</p>
+                <p class="hero-description text-lg text-gray-700 max-w-3xl mx-auto">
                     Experienced software developer proficient in problem-solving, data structures and algorithms.
                     Developing efficient code and enhancing software productivity. Passionate to drive impactful results in software development projects.
                 </p>
@@ -179,14 +411,14 @@
             <!-- About Me & Stats -->
             <section id="about" class="pt-16 pb-12">
                 <!-- Title -->
-                <h2 class="text-4xl font-extrabold text-gray-900 text-center pt-20 pb-10 border-b border-gray-200 mb-12 flex items-center justify-center">
+                <h2 class="animate-on-scroll fade-in-up text-4xl font-extrabold text-gray-900 text-center pt-20 pb-10 border-b border-gray-200 mb-12 flex items-center justify-center">
                     <i data-lucide="user" class="w-8 h-8 text-indigo-600 mr-3"></i>
                     About Me
                 </h2>
 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
                     <!-- Text Content -->
-                    <div class="lg:col-span-2 text-gray-600 space-y-4 text-lg bg-white p-8 rounded-xl border border-gray-200 shadow-md">
+                    <div class="animate-on-scroll slide-in-left lg:col-span-2 text-gray-600 space-y-4 text-lg bg-white p-8 rounded-xl border border-gray-200 shadow-md hover-lift">
                         <p class="font-semibold text-gray-800">Hello! I'm Vineet Gorkanti.</p>
                         <p>I am an experienced Software Developer specializing in full-stack application development, with a focus on Java/Spring Boot for the backend and Angular for dynamic user interfaces. My core expertise lies in building efficient, scalable software solutions by applying strong problem-solving skills, Data Structures, and Algorithms.</p>
                         <p>Currently, I contribute to enterprise banking solutions at Intellect Design Arena, developing back office software and key banking modules for clients like ICICI and HDFC. I am passionate about driving productivity and innovation through automation and clean code.</p>
@@ -194,25 +426,25 @@
                     <!-- Stat Cards (STATICALLY POPULATED) -->
                     <div id="stats-container" class="lg:col-span-1 space-y-4">
                         <!-- Card 1: Years Experience (Now smaller: p-3, w-5/h-5, text-2xl, text-xs) -->
-                        <div class="text-center p-3 bg-white rounded-xl shadow-lg border border-gray-200 transition duration-300 hover:border-indigo-600">
+                        <div class="animate-on-scroll stat-card stagger-1 text-center p-3 bg-white rounded-xl shadow-lg border border-gray-200 transition duration-300 hover:border-indigo-600">
                             <i data-lucide="briefcase" class="w-5 h-5 mx-auto mb-1 text-indigo-600"></i>
                             <p class="text-2xl font-extrabold text-gray-900">3.5+</p>
                             <p class="text-xs font-medium text-gray-600 mt-1">Years Experience</p>
                         </div>
                         <!-- Card 2: Awards & Certs (Now smaller: p-3, w-5/h-5, text-2xl, text-xs) -->
-                        <div class="text-center p-3 bg-white rounded-xl shadow-lg border border-gray-200 transition duration-300 hover:border-indigo-600">
+                        <div class="animate-on-scroll stat-card stagger-2 text-center p-3 bg-white rounded-xl shadow-lg border border-gray-200 transition duration-300 hover:border-indigo-600">
                             <i data-lucide="award" class="w-5 h-5 mx-auto mb-1 text-indigo-600"></i>
                             <p class="text-2xl font-extrabold text-gray-900">2</p>
                             <p class="text-xs font-medium text-gray-600 mt-1">Awards & Certs</p>
                         </div>
                         <!-- Card 3: Projects Included (Now smaller: p-3, w-5/h-5, text-2xl, text-xs) -->
-                        <div class="text-center p-3 bg-white rounded-xl shadow-lg border border-gray-200 transition duration-300 hover:border-indigo-600">
+                        <div class="animate-on-scroll stat-card stagger-3 text-center p-3 bg-white rounded-xl shadow-lg border border-gray-200 transition duration-300 hover:border-indigo-600">
                             <i data-lucide="code" class="w-5 h-5 mx-auto mb-1 text-indigo-600"></i>
                             <p class="text-2xl font-extrabold text-gray-900">4</p>
                             <p class="text-xs font-medium text-gray-600 mt-1">Projects Included</p>
                         </div>
                         <!-- Card 4: Systems Monitored (Now smaller: p-3, w-5/h-5, text-2xl, text-xs) -->
-                        <div class="text-center p-3 bg-white rounded-xl shadow-lg border border-gray-200 transition duration-300 hover:border-indigo-600">
+                        <div class="animate-on-scroll stat-card stagger-4 text-center p-3 bg-white rounded-xl shadow-lg border border-gray-200 transition duration-300 hover:border-indigo-600">
                             <i data-lucide="monitor" class="w-5 h-5 mx-auto mb-1 text-indigo-600"></i>
                             <p class="text-2xl font-extrabold text-gray-900">70+</p>
                             <p class="text-xs font-medium text-gray-600 mt-1">Systems Monitored</p>
@@ -224,7 +456,7 @@
             <!-- Experience & Education -->
             <section id="experience" class="pt-16 pb-12">
                 <!-- Title -->
-                <h2 class="text-4xl font-extrabold text-gray-900 text-center pt-20 pb-10 border-b border-gray-200 mb-12 flex items-center justify-center">
+                <h2 class="animate-on-scroll fade-in-up text-4xl font-extrabold text-gray-900 text-center pt-20 pb-10 border-b border-gray-200 mb-12 flex items-center justify-center">
                     <i data-lucide="briefcase" class="w-8 h-8 text-indigo-600 mr-3"></i>
                     Experience & Education
                 </h2>
@@ -232,7 +464,7 @@
                 <!-- Timeline Entries (STATICALLY POPULATED) -->
                 <div id="timeline-container" class="max-w-4xl mx-auto">
                     <!-- Entry 1: Product Engineer -->
-                    <div class="flex flex-col sm:flex-row">
+                    <div class="timeline-entry flex flex-col sm:flex-row">
                         <div class="w-full sm:w-1/4 pt-2 pr-6 sm:text-right text-sm font-semibold text-gray-600 mb-2 sm:mb-0">Jul 2022 - Present</div>
                         <div class="w-full sm:w-3/4 border-l border-indigo-600 pl-6 pb-12 relative timeline-dot">
                             <h3 class="text-xl font-bold text-gray-900 mb-1">Product Engineer | Consultant</h3>
@@ -249,7 +481,7 @@
                     </div>
                     
                     <!-- Entry 2: Job Updates Automation System -->
-                    <div class="flex flex-col sm:flex-row">
+                    <div class="timeline-entry flex flex-col sm:flex-row">
                         <div class="w-full sm:w-1/4 pt-2 pr-6 sm:text-right text-sm font-semibold text-gray-600 mb-2 sm:mb-0">Nov 2025</div>
                         <div class="w-full sm:w-3/4 border-l border-indigo-600 pl-6 pb-12 relative timeline-dot">
                             <h3 class="text-xl font-bold text-gray-900 mb-1">Job Updates Automation System</h3>
@@ -267,7 +499,7 @@
                     </div>
 
                     <!-- Entry 3: Real-Time Stock Update System -->
-                    <div class="flex flex-col sm:flex-row">
+                    <div class="timeline-entry flex flex-col sm:flex-row">
                         <div class="w-full sm:w-1/4 pt-2 pr-6 sm:text-right text-sm font-semibold text-gray-600 mb-2 sm:mb-0">Feb 2024</div>
                         <div class="w-full sm:w-3/4 border-l border-indigo-600 pl-6 pb-12 relative timeline-dot">
                             <h3 class="text-xl font-bold text-gray-900 mb-1">Real-Time Stock Update System</h3>
@@ -284,7 +516,7 @@
                     </div>
 
                     <!-- Entry 4: Code Generator Desktop App -->
-                    <div class="flex flex-col sm:flex-row">
+                    <div class="timeline-entry flex flex-col sm:flex-row">
                         <div class="w-full sm:w-1/4 pt-2 pr-6 sm:text-right text-sm font-semibold text-gray-600 mb-2 sm:mb-0">Nov 2023</div>
                         <div class="w-full sm:w-3/4 border-l border-indigo-600 pl-6 pb-12 relative timeline-dot">
                             <h3 class="text-xl font-bold text-gray-900 mb-1">Code Generator Desktop App</h3>
@@ -300,7 +532,7 @@
                     </div>
 
                     <!-- Entry 5: Education -->
-                    <div class="flex flex-col sm:flex-row">
+                    <div class="timeline-entry flex flex-col sm:flex-row">
                         <div class="w-full sm:w-1/4 pt-2 pr-6 sm:text-right text-sm font-semibold text-gray-600 mb-2 sm:mb-0">2018 - 2022</div>
                         <div class="w-full sm:w-3/4 border-l border-indigo-600 pl-6 pb-12 relative timeline-dot">
                             <h3 class="text-xl font-bold text-gray-900 mb-1">B.Tech (Computer Science and Engineering)</h3>
@@ -319,7 +551,7 @@
             <!-- Skills & Expertise -->
             <section id="skills" class="pt-16 pb-12">
                 <!-- Title -->
-                <h2 class="text-4xl font-extrabold text-gray-900 text-center pt-20 pb-10 border-b border-gray-200 mb-12 flex items-center justify-center">
+                <h2 class="animate-on-scroll fade-in-up text-4xl font-extrabold text-gray-900 text-center pt-20 pb-10 border-b border-gray-200 mb-12 flex items-center justify-center">
                     <i data-lucide="code" class="w-8 h-8 text-indigo-600 mr-3"></i>
                     Skills & Expertise
                 </h2>
@@ -327,7 +559,7 @@
                 <!-- Expertise Sections (STATICALLY POPULATED) -->
                 <div id="expertise-container" class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
                     <!-- Column 1: Frontend & Frameworks -->
-                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md">
+                    <div class="animate-on-scroll slide-in-left stagger-1 bg-white p-6 rounded-xl border border-gray-200 shadow-md hover-lift">
                         <h3 class="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">Frontend & Frameworks</h3>
                         <!-- Skill: Angular -->
                         <div class="mb-4">
@@ -336,7 +568,7 @@
                                 <span class="text-indigo-700">85%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 85%;"></div>
+                                <div class="skill-bar bg-indigo-600 h-2.5 rounded-full" style="width: 0%;" data-width="85%"></div>
                             </div>
                         </div>
                         <!-- Skill: HTML / CSS / JS -->
@@ -346,7 +578,7 @@
                                 <span class="text-indigo-700">80%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 80%;"></div>
+                                <div class="skill-bar bg-indigo-600 h-2.5 rounded-full" style="width: 0%;" data-width="80%"></div>
                             </div>
                         </div>
                         <!-- Skill: Bootstrap / Material -->
@@ -356,7 +588,7 @@
                                 <span class="text-indigo-700">75%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 75%;"></div>
+                                <div class="skill-bar bg-indigo-600 h-2.5 rounded-full" style="width: 0%;" data-width="75%"></div>
                             </div>
                         </div>
                         <!-- Skill: Clarity Design -->
@@ -366,7 +598,7 @@
                                 <span class="text-indigo-700">87%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 87%;"></div>
+                                <div class="skill-bar bg-indigo-600 h-2.5 rounded-full" style="width: 0%;" data-width="87%"></div>
                             </div>
                         </div>
                         <!-- Skill: Linux -->
@@ -376,13 +608,13 @@
                                 <span class="text-indigo-700">70%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 70%;"></div>
+                                <div class="skill-bar bg-indigo-600 h-2.5 rounded-full" style="width: 0%;" data-width="70%"></div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Column 2: Backend & Languages -->
-                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md">
+                    <div class="animate-on-scroll fade-in-up stagger-2 bg-white p-6 rounded-xl border border-gray-200 shadow-md hover-lift">
                         <h3 class="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">Backend & Languages</h3>
                         <!-- Skill: Java -->
                         <div class="mb-4">
@@ -391,7 +623,7 @@
                                 <span class="text-indigo-700">72%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 72%;"></div>
+                                <div class="skill-bar bg-indigo-600 h-2.5 rounded-full" style="width: 0%;" data-width="72%"></div>
                             </div>
                         </div>
                         <!-- Skill: Python -->
@@ -401,7 +633,7 @@
                                 <span class="text-indigo-700">80%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 80%;"></div>
+                                <div class="skill-bar bg-indigo-600 h-2.5 rounded-full" style="width: 0%;" data-width="80%"></div>
                             </div>
                         </div>
                         <!-- Skill: Spring Boot -->
@@ -411,7 +643,7 @@
                                 <span class="text-indigo-700">68%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 68%;"></div>
+                                <div class="skill-bar bg-indigo-600 h-2.5 rounded-full" style="width: 0%;" data-width="68%"></div>
                             </div>
                         </div>
                         <!-- Skill: Shell Script -->
@@ -421,7 +653,7 @@
                                 <span class="text-indigo-700">65%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 65%;"></div>
+                                <div class="skill-bar bg-indigo-600 h-2.5 rounded-full" style="width: 0%;" data-width="65%"></div>
                             </div>
                         </div>
                         <!-- Skill: Core Concepts (OOPs, OS, DBMS) -->
@@ -431,13 +663,13 @@
                                 <span class="text-indigo-700">75%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 75%;"></div>
+                                <div class="skill-bar bg-indigo-600 h-2.5 rounded-full" style="width: 0%;" data-width="75%"></div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Column 3: Data & DevOps Tools -->
-                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md">
+                    <div class="animate-on-scroll slide-in-right stagger-3 bg-white p-6 rounded-xl border border-gray-200 shadow-md hover-lift">
                         <h3 class="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">Data & DevOps Tools</h3>
                         <!-- Skill: MySQL / Oracle / Postgres -->
                         <div class="mb-4">
@@ -446,7 +678,7 @@
                                 <span class="text-indigo-700">72%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 72%;"></div>
+                                <div class="skill-bar bg-indigo-600 h-2.5 rounded-full" style="width: 0%;" data-width="72%"></div>
                             </div>
                         </div>
                         <!-- Skill: Firebase -->
@@ -456,7 +688,7 @@
                                 <span class="text-indigo-700">70%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 70%;"></div>
+                                <div class="skill-bar bg-indigo-600 h-2.5 rounded-full" style="width: 0%;" data-width="70%"></div>
                             </div>
                         </div>
                         <!-- Skill: Git / Jira / Confluence -->
@@ -466,7 +698,7 @@
                                 <span class="text-indigo-700">90%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 90%;"></div>
+                                <div class="skill-bar bg-indigo-600 h-2.5 rounded-full" style="width: 0%;" data-width="90%"></div>
                             </div>
                         </div>
                         <!-- Skill: IntelliJ / VS Code -->
@@ -476,7 +708,7 @@
                                 <span class="text-indigo-700">85%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 85%;"></div>
+                                <div class="skill-bar bg-indigo-600 h-2.5 rounded-full" style="width: 0%;" data-width="85%"></div>
                             </div>
                         </div>
                         <!-- Skill: Postman / Android Studio -->
@@ -486,25 +718,25 @@
                                 <span class="text-indigo-700">75%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 75%;"></div>
+                                <div class="skill-bar bg-indigo-600 h-2.5 rounded-full" style="width: 0%;" data-width="75%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Soft Skills & Tools -->
-                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md">
+                <div class="animate-on-scroll fade-in-up bg-white p-6 rounded-xl border border-gray-200 shadow-md hover-lift">
                     <h3 class="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2 flex items-center">
                         <i data-lucide="layers" class="w-5 h-5 mr-2 text-indigo-600"></i> Core Concepts & Strengths
                     </h3>
                     <div id="soft-skills-container" class="flex flex-wrap gap-3">
                         <!-- Soft Skills (STATICALLY POPULATED) -->
-                        <span class="text-sm font-medium bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full border border-indigo-300 transition hover:bg-indigo-200">Problem Solving</span>
-                        <span class="text-sm font-medium bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full border border-indigo-300 transition hover:bg-indigo-200">Data Structures</span>
-                        <span class="text-sm font-medium bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full border border-indigo-300 transition hover:bg-indigo-200">Algorithms</span>
-                        <span class="text-sm font-medium bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full border border-indigo-300 transition hover:bg-indigo-200">Software Productivity</span>
-                        <span class="text-sm font-medium bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full border border-indigo-300 transition hover:bg-indigo-200">Efficient Code Development</span>
-                        <span class="text-sm font-medium bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full border border-indigo-300 transition hover:bg-indigo-200">Driving Impactful Results</span>
+                        <span class="skill-tag text-sm font-medium bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full border border-indigo-300 transition hover:bg-indigo-200">Problem Solving</span>
+                        <span class="skill-tag text-sm font-medium bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full border border-indigo-300 transition hover:bg-indigo-200">Data Structures</span>
+                        <span class="skill-tag text-sm font-medium bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full border border-indigo-300 transition hover:bg-indigo-200">Algorithms</span>
+                        <span class="skill-tag text-sm font-medium bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full border border-indigo-300 transition hover:bg-indigo-200">Software Productivity</span>
+                        <span class="skill-tag text-sm font-medium bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full border border-indigo-300 transition hover:bg-indigo-200">Efficient Code Development</span>
+                        <span class="skill-tag text-sm font-medium bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full border border-indigo-300 transition hover:bg-indigo-200">Driving Impactful Results</span>
                     </div>
                 </div>
             </section>
@@ -512,7 +744,7 @@
             <!-- Projects -->
             <section id="projects" class="pt-16 pb-12">
                 <!-- Title -->
-                <h2 class="text-4xl font-extrabold text-gray-900 text-center pt-20 pb-10 border-b border-gray-200 mb-12 flex items-center justify-center">
+                <h2 class="animate-on-scroll fade-in-up text-4xl font-extrabold text-gray-900 text-center pt-20 pb-10 border-b border-gray-200 mb-12 flex items-center justify-center">
                     <i data-lucide="layout-list" class="w-8 h-8 text-indigo-600 mr-3"></i>
                     Featured Projects
                 </h2>
@@ -520,25 +752,25 @@
                 <!-- Project Cards (STATICALLY POPULATED) -->
                 <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- Project 1: Job Updates Automation System -->
-                    <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-md transition duration-300 hover:border-indigo-600 hover:shadow-xl hover:shadow-indigo-100">
+                    <div class="animate-on-scroll project-card stagger-1 p-6 rounded-xl bg-white border border-gray-200 shadow-md transition duration-300 hover:border-indigo-600 hover:shadow-xl hover:shadow-indigo-100">
                         <h4 class="text-xl font-bold text-gray-900 mb-2">Job Updates Automation System</h4>
                         <p class="text-sm font-medium text-indigo-700 mb-3">HTML, CSS, JavaScript, Gmail, DSA</p>
-                        <p class="text-gray-700 text-sm">Software to monitor 40+ product-based companies’ career pages. Filter Jobs based on experience, role, and location to receive only highly applicable job alerts. significantly improving job opportunities with immediate Gmail alert.</p>
+                        <p class="text-gray-700 text-sm">Software to monitor 40+ product-based companies' career pages. Filter Jobs based on experience, role, and location to receive only highly applicable job alerts. significantly improving job opportunities with immediate Gmail alert.</p>
                     </div>
                     <!-- Project 2: Code Generator Desktop App -->
-                    <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-md transition duration-300 hover:border-indigo-600 hover:shadow-xl hover:shadow-indigo-100">
+                    <div class="animate-on-scroll project-card stagger-2 p-6 rounded-xl bg-white border border-gray-200 shadow-md transition duration-300 hover:border-indigo-600 hover:shadow-xl hover:shadow-indigo-100">
                         <h4 class="text-xl font-bold text-gray-900 mb-2">Code Generator Desktop App</h4>
                         <p class="text-sm font-medium text-indigo-700 mb-3">Python, DSA, Excel</p>
                         <p class="text-gray-700 text-sm">High-performance software to automate code generation based on basic screen inputs. Reduced manual code generation time from weeks to just few days. Resulting in a 70% development time efficiency.</p>
                     </div>
                     <!-- Project 3: Real-Time Stock Update System -->
-                    <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-md transition duration-300 hover:border-indigo-600 hover:shadow-xl hover:shadow-indigo-100">
+                    <div class="animate-on-scroll project-card stagger-3 p-6 rounded-xl bg-white border border-gray-200 shadow-md transition duration-300 hover:border-indigo-600 hover:shadow-xl hover:shadow-indigo-100">
                         <h4 class="text-xl font-bold text-gray-900 mb-2">Real-Time Stock Update System</h4>
                         <p class="text-sm font-medium text-indigo-700 mb-3">DSA, Data Analytics, AI</p>
                         <p class="text-gray-700 text-sm">Engineered a system for real-time monitoring of stock market data. Trigger Gmail alerts with accurate market updates/news within recent 5 minutes. Ensured timely communication of critical information to users for pre-profit booking insights.</p>
                     </div>
                     <!-- Project 4: Banking Back Office Modules -->
-                    <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-md transition duration-300 hover:border-indigo-600 hover:shadow-xl hover:shadow-indigo-100">
+                    <div class="animate-on-scroll project-card stagger-4 p-6 rounded-xl bg-white border border-gray-200 shadow-md transition duration-300 hover:border-indigo-600 hover:shadow-xl hover:shadow-indigo-100">
                         <h4 class="text-xl font-bold text-gray-900 mb-2">Banking Back Office Modules</h4>
                         <p class="text-sm font-medium text-indigo-700 mb-3">Java, Spring Boot, Angular, Clarity Design</p>
                         <p class="text-gray-700 text-sm">Develop back office software and user interface for banks such as ICICI, HDFC, SBC and AXIS. Implement various banking modules including Alerts, Reports, Charges, Virtual Accounts</p>
@@ -549,14 +781,14 @@
             <!-- Contact -->
             <section id="contact" class="pt-16 pb-24">
                 <!-- Title -->
-                <h2 class="text-4xl font-extrabold text-gray-900 text-center pt-20 pb-10 border-b border-gray-200 mb-12 flex items-center justify-center">
+                <h2 class="animate-on-scroll fade-in-up text-4xl font-extrabold text-gray-900 text-center pt-20 pb-10 border-b border-gray-200 mb-12 flex items-center justify-center">
                     <i data-lucide="message-square" class="w-8 h-8 text-indigo-600 mr-3"></i>
                     Get In Touch
                 </h2>
 
                 <div class="grid grid-cols-1 lg:grid-cols-1 gap-8 max-w-4xl mx-auto">
                     <!-- Info Column -->
-                    <div class="p-6 rounded-xl bg-white border border-gray-200 shadow-md space-y-4 text-gray-600">
+                    <div class="animate-on-scroll scale-in p-6 rounded-xl bg-white border border-gray-200 shadow-md space-y-4 text-gray-600 hover-lift">
                         <p class="text-lg font-semibold text-gray-800">Let's Connect</p>
                         <p class="text-sm">I'm currently focused on leveraging my skills in Java, Angular, and Python to tackle new challenges in enterprise software development and automation. Feel free to reach out regarding career opportunities, innovative project collaborations, or discussions on DSA/problem-solving.</p>
                         <div class="space-y-3 pt-4">
@@ -644,11 +876,133 @@
             }
         };
 
+        // --- Scroll Animation Setup ---
+
+        // Intersection Observer for scroll-triggered animations
+        const setupScrollAnimations = () => {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Remove animated class first to allow retrigger
+                        entry.target.classList.remove('animated');
+                        
+                        // Force reflow to restart animation
+                        void entry.target.offsetWidth;
+                        
+                        // Add animated class to trigger animation
+                        entry.target.classList.add('animated');
+                        
+                        // Special handling for timeline entries
+                        if (entry.target.classList.contains('timeline-entry')) {
+                            entry.target.style.transitionDelay = '0.1s';
+                        }
+                    } else {
+                        // Remove animated class when element leaves viewport
+                        entry.target.classList.remove('animated');
+                    }
+                });
+            }, observerOptions);
+
+            // Separate observer for skills section to handle skill bars
+            const skillsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateSkillBars();
+                    } else {
+                        resetSkillBars();
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all elements with animate-on-scroll class
+            document.querySelectorAll('.animate-on-scroll, .timeline-entry').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Observe skills section for skill bar animations
+            const skillsSection = document.getElementById('skills');
+            if (skillsSection) {
+                skillsObserver.observe(skillsSection);
+            }
+        };
+
+        // Animate skill bars
+        const animateSkillBars = () => {
+            const skillBars = document.querySelectorAll('.skill-bar');
+            skillBars.forEach((bar, index) => {
+                const width = bar.dataset.width;
+                if (width) {
+                    // Reset to 0 first
+                    bar.style.width = '0%';
+                    bar.classList.remove('animated');
+                    
+                    // Force reflow
+                    void bar.offsetWidth;
+                    
+                    // Animate to target width
+                    setTimeout(() => {
+                        bar.style.width = width;
+                        bar.classList.add('animated');
+                    }, index * 100);
+                }
+            });
+        };
+
+        // Reset skill bars
+        const resetSkillBars = () => {
+            const skillBars = document.querySelectorAll('.skill-bar');
+            skillBars.forEach(bar => {
+                bar.style.width = '0%';
+                bar.classList.remove('animated');
+            });
+        };
+
+        // Initialize skill bars with 0 width
+        const initializeSkillBars = () => {
+            document.querySelectorAll('.skill-bar').forEach(bar => {
+                const width = bar.style.width;
+                if (width && width !== '0%' && !bar.dataset.width) {
+                    bar.dataset.width = width;
+                    bar.style.width = '0%';
+                }
+            });
+        };
+
+        // Header scroll effect
+        const setupHeaderScroll = () => {
+            const header = document.getElementById('header');
+
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        };
+
         // --- Initialization ---
 
         window.onload = () => {
             // Setup mobile menu logic
             setupMobileMenu();
+            
+            // Initialize skill bars
+            initializeSkillBars();
+            
+            // Setup scroll animations
+            setupScrollAnimations();
+            
+            // Setup header scroll effect
+            setupHeaderScroll();
+            
             // IMPORTANT: Render icons *after* all content is loaded
             renderIcons(); 
         };
