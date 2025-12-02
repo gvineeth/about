@@ -478,7 +478,7 @@
                     </section>
                 </main>
                 <footer class="py-6 border-t border-gray-200 text-center text-sm text-gray-500 mt-auto bg-white">
-                    <p>&copy; 2025 Portfolio. All Rights Reserved.</p>
+                    <p>&copy; 2025 GVK. All Rights Reserved.</p>
                 </footer>
             </div>
         `;
