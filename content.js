@@ -303,7 +303,7 @@
                 <header id="header" class="sticky top-0 z-40 bg-white bg-opacity-95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
                         <div class="text-2xl font-extrabold text-gray-800">
-                            <span class="text-indigo-600">Vineet kumar</span>
+                            <span class="text-indigo-600">Vineetkumar</span>
                         </div>
                         <nav class="hidden md:flex space-x-6">
                             <ul id="main-nav-links" class="flex space-x-6">
