@@ -1,5 +1,4 @@
-
-  // Dynamic Portfolio Builder - All structure and content rendered from script
+// Dynamic Portfolio Builder - All structure and content rendered from script
 (function() {
     'use strict';
     
@@ -251,7 +250,20 @@
             description: decode('SSdtIGN1cnJlbnRseSBmb2N1c2VkIG9uIGxldmVyYWdpbmcgbXkgc2tpbGxzIGluIEphdmEsIEFuZ3VsYXIsIGFuZCBQeXRob24gdG8gdGFja2xlIG5ldyBjaGFsbGVuZ2VzIGluIGVudGVycHJpc2Ugc29mdHdhcmUgZGV2ZWxvcG1lbnQgYW5kIGF1dG9tYXRpb24uIEZlZWwgZnJlZSB0byByZWFjaCBvdXQgcmVnYXJkaW5nIGNhcmVlciBvcHBvcnR1bml0aWVzLCBpbm5vdmF0aXZlIHByb2plY3QgY29sbGFib3JhdGlvbnMsIG9yIGRpc2N1c3Npb25zIG9uIERTQS9wcm9ibGVtLXNvbHZpbmcu'),
             email: decode('bGpvYmd2aW5lZXRoQGdtYWlsLmNvbQ=='),
             phone: decode('KzkxKSA4OTE5MDk1Mzk1'),
-            location: decode('SFlERVJBQkFELCBJTkRJQQ==')
+            location: decode('SFlERVJBQkFELCBJTkRJQQ=='),
+            linkedin: decode('aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL3ZpbmVldGt1bWFyLWdvcmthbnRpLTAxMWIxNTIwMy8='),
+            payment: {
+                title: decode('U3VwcG9ydCAmIEhlbHA='),
+                description: decode('SWYgeW91IGZpbmQgbXkgd29yayBoZWxwZnVsIGFuZCB3b3VsZCBsaWtlIHRvIHN1cHBvcnQgbWUsIHlvdSBjYW4gY29udHJpYnV0ZSB1c2luZyB0aGUgZm9sbG93aW5nIHBheW1lbnQgb3B0aW9uczo='),
+                upi: decode('ZW5naW5lZXJndmluZWV0aEBva2ljaWNp'),
+                bankAccount: {
+                    name: decode('R09SS0FOVEkgVklORUVUIEtVTUFS'),
+                    number: decode('NjY4NzAwMzgzNQ=='),
+                    ifsc: decode('SURJQjAwMEIxNjk='),
+                    bankName: decode('SW5kaWFuIEJhbms=')
+                },
+                qrCode: decode('aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL3RodW1ibmFpbD9pZD0xQ0hpdWEzWExvZUdVZVBRay10ZDRscG94WEwzZDMtNXYmc3o9dzEwMDA=')
+            }
         }
     };
     
@@ -279,6 +291,7 @@
                             <li><a href="#skills" class="block text-2xl font-semibold text-gray-800 hover:text-indigo-600 py-3 transition duration-150 border-b border-gray-100"><i data-lucide="code" class="w-6 h-6 inline-block mr-3 text-indigo-600"></i>Skills</a></li>
                             <li><a href="#projects" class="block text-2xl font-semibold text-gray-800 hover:text-indigo-600 py-3 transition duration-150 border-b border-gray-100"><i data-lucide="layout-list" class="w-6 h-6 inline-block mr-3 text-indigo-600"></i>Projects</a></li>
                             <li><a href="#contact" class="block text-2xl font-semibold text-gray-800 hover:text-indigo-600 py-3 transition duration-150 border-b border-gray-100"><i data-lucide="mail" class="w-6 h-6 inline-block mr-3 text-indigo-600"></i>Contact</a></li>
+                            <li><a href="#payment" class="block text-2xl font-semibold text-gray-800 hover:text-indigo-600 py-3 transition duration-150 border-b border-gray-100"><i data-lucide="heart-handshake" class="w-6 h-6 inline-block mr-3 text-indigo-600"></i>Support</a></li>
                         </ul>
                     </nav>
                     <a href="#contact" id="mobile-contact-link" class="mt-8 text-center bg-indigo-600 text-white font-medium px-4 py-3 rounded-xl hover:bg-indigo-700 transition shadow-lg">
@@ -290,7 +303,7 @@
                 <header id="header" class="sticky top-0 z-40 bg-white bg-opacity-95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
                         <div class="text-2xl font-extrabold text-gray-800">
-                            <span class="text-indigo-600">Portfolio</span>
+                            <span class="text-indigo-600">Vineetkumar</span>
                         </div>
                         <nav class="hidden md:flex space-x-6">
                             <ul id="main-nav-links" class="flex space-x-6">
@@ -299,6 +312,7 @@
                                 <li><a href="#skills" class="text-gray-600 hover:text-indigo-700 transition font-medium px-3 py-2 rounded-lg">Skills</a></li>
                                 <li><a href="#projects" class="text-gray-600 hover:text-indigo-700 transition font-medium px-3 py-2 rounded-lg">Projects</a></li>
                                 <li><a href="#contact" class="text-gray-600 hover:text-indigo-700 transition font-medium px-3 py-2 rounded-lg">Contact</a></li>
+                                <li><a href="#payment" class="text-gray-600 hover:text-indigo-700 transition font-medium px-3 py-2 rounded-lg">Support</a></li>
                             </ul>
                         </nav>
                         <div class="flex items-center space-x-4 md:hidden">
@@ -383,6 +397,81 @@
                                         <i data-lucide="map-pin" class="w-5 h-5 text-indigo-600 flex-shrink-0"></i>
                                         <span></span>
                                     </div>
+                                    <div class="flex items-center space-x-3">
+                                        <i data-lucide="linkedin" class="w-5 h-5 text-indigo-600 flex-shrink-0"></i>
+                                        <a href="" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 hover:underline transition"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="payment" class="pt-16 pb-24">
+                        <h2 class="animate-on-scroll fade-in-up text-4xl font-extrabold text-gray-900 text-center pt-20 pb-10 border-b border-gray-200 mb-12 flex items-center justify-center">
+                            <i data-lucide="heart-handshake" class="w-8 h-8 text-indigo-600 mr-3"></i>
+                            <span id="payment-title"></span>
+                        </h2>
+                        <div class="max-w-5xl mx-auto">
+                            <p id="payment-description" class="text-center text-gray-600 mb-12 animate-on-scroll fade-in-up max-w-2xl mx-auto"></p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="animate-on-scroll slide-in-left bg-gradient-to-br from-indigo-50 to-white p-6 rounded-xl border border-indigo-100 shadow-md flex flex-col">
+                                    <h4 class="text-lg font-bold text-gray-900 mb-6 flex items-center justify-center">
+                                        <div class="p-2 bg-indigo-100 rounded-lg mr-3">
+                                            <i data-lucide="wallet" class="w-5 h-5 text-indigo-600"></i>
+                                        </div>
+                                        UPI Payment
+                                    </h4>
+                                    <div class="flex-grow flex flex-col items-center justify-center mb-6">
+                                        <div class="mb-6">
+                                            <div class="flex justify-center mb-3">
+                                                <div class="bg-white p-4 rounded-xl border-2 border-indigo-200 shadow-sm">
+                                                    <img id="qr-code-image" src="" alt="Payment QR Code" class="w-56 h-56 rounded-lg object-contain" onerror="this.onerror=null; this.src=''; this.style.display='none'; document.getElementById('qr-placeholder').style.display='block';">
+                                                    <p id="qr-placeholder" class="text-gray-400 text-sm text-center py-8" style="display: none;">QR Code image will appear here<br><span class="text-xs text-gray-500">Make sure the Google Drive file is set to &quot;Anyone with the link can view&quot;</span></p>
+                                                </div>
+                                            </div>
+                                            <p class="text-sm text-gray-500 text-center">Scan to pay via UPI</p>
+                                        </div>
+                                        <div class="border-t border-indigo-200 pt-6 w-full max-w-md">
+                                            <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm text-center">
+                                                <p class="text-xs text-gray-500 uppercase tracking-wide mb-2">UPI ID</p>
+                                                <p id="upi-id" class="text-lg font-bold text-gray-900 font-mono break-all"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button id="copy-upi" class="w-full bg-indigo-600 text-white px-4 py-3 rounded-xl hover:bg-indigo-700 transition shadow-md hover:shadow-lg flex items-center justify-center space-x-2 font-medium mt-auto">
+                                        <i data-lucide="copy" class="w-4 h-4"></i>
+                                        <span>Copy UPI ID</span>
+                                    </button>
+                                </div>
+                                
+                                <div class="animate-on-scroll slide-in-right bg-white p-6 rounded-xl border border-gray-200 shadow-md flex flex-col">
+                                    <h4 class="text-lg font-bold text-gray-900 mb-6 flex items-center">
+                                        <div class="p-2 bg-indigo-100 rounded-lg mr-3">
+                                            <i data-lucide="building-2" class="w-5 h-5 text-indigo-600"></i>
+                                        </div>
+                                        Bank Transfer
+                                    </h4>
+                                    <div class="space-y-3 flex-grow mb-6">
+                                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-100">
+                                            <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">Account Holder</p>
+                                            <p id="bank-name" class="text-base font-semibold text-gray-900"></p>
+                                        </div>
+                                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-100">
+                                            <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">Account Number</p>
+                                            <p id="bank-account" class="text-base font-semibold text-gray-900 font-mono"></p>
+                                        </div>
+                                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-100">
+                                            <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">IFSC Code</p>
+                                            <p id="bank-ifsc" class="text-base font-semibold text-gray-900 font-mono"></p>
+                                        </div>
+                                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-100">
+                                            <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">Bank Name</p>
+                                            <p id="bank-bankname" class="text-base font-semibold text-gray-900"></p>
+                                        </div>
+                                    </div>
+                                    <button id="copy-bank" class="w-full bg-indigo-600 text-white px-4 py-3 rounded-xl hover:bg-indigo-700 transition shadow-md hover:shadow-lg flex items-center justify-center space-x-2 font-medium mt-auto">
+                                        <i data-lucide="copy" class="w-4 h-4"></i>
+                                        <span>Copy Bank Details</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -521,11 +610,108 @@
             const emailEl = contactDiv.querySelectorAll('.flex.items-center span')[0];
             const phoneEl = contactDiv.querySelectorAll('.flex.items-center span')[1];
             const locationEl = contactDiv.querySelectorAll('.flex.items-center span')[2];
+            const linkedinEl = contactDiv.querySelector('.flex.items-center a');
             if (titleEl) titleEl.textContent = contact.title;
             if (descEl) descEl.textContent = contact.description;
             if (emailEl) emailEl.textContent = contact.email;
             if (phoneEl) phoneEl.textContent = contact.phone;
             if (locationEl) locationEl.textContent = contact.location;
+            if (linkedinEl) {
+                linkedinEl.href = contact.linkedin;
+                linkedinEl.textContent = 'LinkedIn Profile';
+            }
+        }
+        
+        // Populate payment details
+        const payment = contentData.contact.payment;
+        const paymentTitleEl = document.getElementById('payment-title');
+        const paymentDescEl = document.getElementById('payment-description');
+        const upiIdEl = document.getElementById('upi-id');
+        const bankNameEl = document.getElementById('bank-name');
+        const bankAccountEl = document.getElementById('bank-account');
+        const bankIfscEl = document.getElementById('bank-ifsc');
+        const bankBankNameEl = document.getElementById('bank-bankname');
+        const qrCodeEl = document.getElementById('qr-code-image');
+        
+        if (paymentTitleEl) paymentTitleEl.textContent = payment.title;
+        if (paymentDescEl) paymentDescEl.textContent = payment.description;
+        if (upiIdEl) upiIdEl.textContent = payment.upi || 'Not provided';
+        if (bankNameEl) bankNameEl.textContent = payment.bankAccount.name || 'Not provided';
+        if (bankAccountEl) bankAccountEl.textContent = payment.bankAccount.number || 'Not provided';
+        if (bankIfscEl) bankIfscEl.textContent = payment.bankAccount.ifsc || 'Not provided';
+        if (bankBankNameEl) bankBankNameEl.textContent = payment.bankAccount.bankName || 'Not provided';
+        if (qrCodeEl && payment.qrCode) {
+            const fileId = '1CHiua3XLoeGUePQk-td4lpoxXL3d3-5v';
+            // Try multiple Google Drive URL formats as fallbacks
+            const qrUrls = [
+                `https://drive.google.com/thumbnail?id=${fileId}&sz=w1000`,
+                `https://drive.google.com/uc?export=view&id=${fileId}`,
+                `https://docs.google.com/uc?export=download&id=${fileId}`,
+                payment.qrCode // Original URL as last fallback
+            ];
+            
+            let currentUrlIndex = 0;
+            const tryNextUrl = () => {
+                if (currentUrlIndex < qrUrls.length) {
+                    qrCodeEl.src = qrUrls[currentUrlIndex];
+                    currentUrlIndex++;
+                } else {
+                    // All URLs failed, show placeholder
+                    qrCodeEl.style.display = 'none';
+                    const placeholder = document.getElementById('qr-placeholder');
+                    if (placeholder) {
+                        placeholder.style.display = 'block';
+                    }
+                }
+            };
+            
+            qrCodeEl.onerror = () => {
+                tryNextUrl();
+            };
+            
+            qrCodeEl.onload = () => {
+                // Image loaded successfully, hide placeholder
+                const placeholder = document.getElementById('qr-placeholder');
+                if (placeholder) {
+                    placeholder.style.display = 'none';
+                }
+            };
+            
+            // Start with first URL
+            tryNextUrl();
+        }
+        
+        // Setup copy functionality
+        const copyUpiBtn = document.getElementById('copy-upi');
+        const copyBankBtn = document.getElementById('copy-bank');
+        
+        if (copyUpiBtn && payment.upi) {
+            copyUpiBtn.addEventListener('click', () => {
+                navigator.clipboard.writeText(payment.upi).then(() => {
+                    const originalText = copyUpiBtn.innerHTML;
+                    copyUpiBtn.innerHTML = '<i data-lucide="check" class="w-4 h-4"></i><span>Copied!</span>';
+                    setTimeout(() => {
+                        copyUpiBtn.innerHTML = originalText;
+                        if (typeof lucide !== 'undefined') lucide.createIcons();
+                    }, 2000);
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                });
+            });
+        }
+        
+        if (copyBankBtn) {
+            copyBankBtn.addEventListener('click', () => {
+                const bankDetails = `Account Holder: ${payment.bankAccount.name}\nAccount Number: ${payment.bankAccount.number}\nIFSC: ${payment.bankAccount.ifsc}\nBank: ${payment.bankAccount.bankName}`;
+                navigator.clipboard.writeText(bankDetails).then(() => {
+                    const originalText = copyBankBtn.innerHTML;
+                    copyBankBtn.innerHTML = '<i data-lucide="check" class="w-4 h-4"></i><span>Copied!</span>';
+                    setTimeout(() => {
+                        copyBankBtn.innerHTML = originalText;
+                        if (typeof lucide !== 'undefined') lucide.createIcons();
+                    }, 2000);
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                });
+            });
         }
     };
     
@@ -680,4 +866,3 @@
     
     window.portfolioContent = { init, data: contentData };
 })();
-
