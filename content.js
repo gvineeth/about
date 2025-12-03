@@ -245,6 +245,11 @@
                 description: decode('RGV2ZWxvcCBiYWNrIG9mZmljZSBzb2Z0d2FyZSBhbmQgdXNlciBpbnRlcmZhY2UgZm9yIGJhbmtzIHN1Y2ggYXMgSUNJQ0ksIEhERkMsIFNCQyBhbmQgQVhJUy4gSW1wbGVtZW50IHZhcmlvdXMgYmFua2luZyBtb2R1bGVzIGluY2x1ZGluZyBBbGVydHMsIFJlcG9ydHMsIENoYXJnZXMsIFZpcnR1YWwgQWNjb3VudHM=')
             }
         ],
+        attachments: {
+            title: decode('QXR0YWNobWVudHMgJiBEb2N1bWVudHM='),
+            description: decode('VmlldyBteSByZXN1bWUsIGNlcnRpZmljYXRlcywgYW5kIG90aGVyIGRvY3VtZW50cy4='),
+            mainUrl: 'https://sites.google.com/view/gvineethsites/about/attachments'
+        },
         contact: {
             title: decode('TGV0J3MgQ29ubmVjdA=='),
             description: decode('SSdtIGN1cnJlbnRseSBmb2N1c2VkIG9uIGxldmVyYWdpbmcgbXkgc2tpbGxzIGluIEphdmEsIEFuZ3VsYXIsIGFuZCBQeXRob24gdG8gdGFja2xlIG5ldyBjaGFsbGVuZ2VzIGluIGVudGVycHJpc2Ugc29mdHdhcmUgZGV2ZWxvcG1lbnQgYW5kIGF1dG9tYXRpb24uIEZlZWwgZnJlZSB0byByZWFjaCBvdXQgcmVnYXJkaW5nIGNhcmVlciBvcHBvcnR1bml0aWVzLCBpbm5vdmF0aXZlIHByb2plY3QgY29sbGFib3JhdGlvbnMsIG9yIGRpc2N1c3Npb25zIG9uIERTQS9wcm9ibGVtLXNvbHZpbmcu'),
@@ -290,6 +295,7 @@
                             <li><a href="#experience" class="block text-2xl font-semibold text-gray-800 hover:text-indigo-600 py-3 transition duration-150 border-b border-gray-100"><i data-lucide="briefcase" class="w-6 h-6 inline-block mr-3 text-indigo-600"></i>Experience</a></li>
                             <li><a href="#skills" class="block text-2xl font-semibold text-gray-800 hover:text-indigo-600 py-3 transition duration-150 border-b border-gray-100"><i data-lucide="code" class="w-6 h-6 inline-block mr-3 text-indigo-600"></i>Skills</a></li>
                             <li><a href="#projects" class="block text-2xl font-semibold text-gray-800 hover:text-indigo-600 py-3 transition duration-150 border-b border-gray-100"><i data-lucide="layout-list" class="w-6 h-6 inline-block mr-3 text-indigo-600"></i>Projects</a></li>
+                            <li><a href="#attachments" class="block text-2xl font-semibold text-gray-800 hover:text-indigo-600 py-3 transition duration-150 border-b border-gray-100"><i data-lucide="file-text" class="w-6 h-6 inline-block mr-3 text-indigo-600"></i>Attachments</a></li>
                             <li><a href="#contact" class="block text-2xl font-semibold text-gray-800 hover:text-indigo-600 py-3 transition duration-150 border-b border-gray-100"><i data-lucide="mail" class="w-6 h-6 inline-block mr-3 text-indigo-600"></i>Contact</a></li>
                             <li><a href="#payment" class="block text-2xl font-semibold text-gray-800 hover:text-indigo-600 py-3 transition duration-150 border-b border-gray-100"><i data-lucide="heart-handshake" class="w-6 h-6 inline-block mr-3 text-indigo-600"></i>Support</a></li>
                         </ul>
@@ -311,6 +317,7 @@
                                 <li><a href="#experience" class="text-gray-600 hover:text-indigo-700 transition font-medium px-3 py-2 rounded-lg">Experience</a></li>
                                 <li><a href="#skills" class="text-gray-600 hover:text-indigo-700 transition font-medium px-3 py-2 rounded-lg">Skills</a></li>
                                 <li><a href="#projects" class="text-gray-600 hover:text-indigo-700 transition font-medium px-3 py-2 rounded-lg">Projects</a></li>
+                                <li><a href="#attachments" class="text-gray-600 hover:text-indigo-700 transition font-medium px-3 py-2 rounded-lg">Attachments</a></li>
                                 <li><a href="#contact" class="text-gray-600 hover:text-indigo-700 transition font-medium px-3 py-2 rounded-lg">Contact</a></li>
                                 <li><a href="#payment" class="text-gray-600 hover:text-indigo-700 transition font-medium px-3 py-2 rounded-lg">Support</a></li>
                             </ul>
@@ -374,6 +381,23 @@
                             Featured Projects
                         </h2>
                         <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+                    </section>
+                    <section id="attachments" class="pt-16 pb-12">
+                        <h2 class="animate-on-scroll fade-in-up text-4xl font-extrabold text-gray-900 text-center pt-20 pb-10 border-b border-gray-200 mb-12 flex items-center justify-center">
+                            <i data-lucide="file-text" class="w-8 h-8 text-indigo-600 mr-3"></i>
+                            <span id="attachments-title"></span>
+                        </h2>
+                        <div class="max-w-4xl mx-auto">
+                            <p id="attachments-description" class="text-center text-gray-600 mb-8 animate-on-scroll fade-in-up"></p>
+                            <div class="animate-on-scroll scale-in bg-white p-8 rounded-xl border border-gray-200 shadow-md hover-lift">
+                                <div class="text-center">
+                                    <a id="attachments-main-link" href="" class="inline-flex items-center justify-center space-x-3 bg-indigo-600 text-white font-semibold px-8 py-4 rounded-xl hover:bg-indigo-700 transition shadow-lg hover:shadow-xl transform hover:scale-105">
+                                        <i data-lucide="file-text" class="w-5 h-5"></i>
+                                        <span>View All Attachments & Documents</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </section>
                     <section id="contact" class="pt-16 pb-24">
                         <h2 class="animate-on-scroll fade-in-up text-4xl font-extrabold text-gray-900 text-center pt-20 pb-10 border-b border-gray-200 mb-12 flex items-center justify-center">
@@ -580,6 +604,20 @@
             `;
             container.appendChild(card);
         });
+    };
+    
+    // Build attachments section
+    const buildAttachments = () => {
+        const attachments = contentData.attachments;
+        const titleEl = document.getElementById('attachments-title');
+        const descEl = document.getElementById('attachments-description');
+        const mainLinkEl = document.getElementById('attachments-main-link');
+        
+        if (titleEl) titleEl.textContent = attachments.title;
+        if (descEl) descEl.textContent = attachments.description;
+        if (mainLinkEl) {
+            mainLinkEl.href = attachments.mainUrl;
+        }
     };
     
     // Populate content
@@ -845,6 +883,7 @@
         buildExperience();
         buildSkills();
         buildProjects();
+        buildAttachments();
         populateContent();
         setupJS();
         
