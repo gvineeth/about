@@ -248,7 +248,7 @@
         attachments: {
             title: decode('QXR0YWNobWVudHMgJiBEb2N1bWVudHM='),
             description: decode('VmlldyBteSByZXN1bWUsIGNlcnRpZmljYXRlcywgYW5kIG90aGVyIGRvY3VtZW50cy4='),
-            mainUrl: 'https://sites.google.com/view/gvineethsites/about/attachments'
+            mainUrl: 'https://sites.google.com/view/gvineethsites/home/attachments'
         },
         contact: {
             title: decode('TGV0J3MgQ29ubmVjdA=='),
