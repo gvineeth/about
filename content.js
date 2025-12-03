@@ -391,7 +391,7 @@
                             <p id="attachments-description" class="text-center text-gray-600 mb-8 animate-on-scroll fade-in-up"></p>
                             <div class="animate-on-scroll scale-in bg-white p-8 rounded-xl border border-gray-200 shadow-md hover-lift">
                                 <div class="text-center">
-                                    <a id="attachments-main-link" href="" class="inline-flex items-center justify-center space-x-3 bg-indigo-600 text-white font-semibold px-8 py-4 rounded-xl hover:bg-indigo-700 transition shadow-lg hover:shadow-xl transform hover:scale-105">
+                                    <a id="attachments-main-link" href="" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center space-x-3 bg-indigo-600 text-white font-semibold px-8 py-4 rounded-xl hover:bg-indigo-700 transition shadow-lg hover:shadow-xl transform hover:scale-105">
                                         <i data-lucide="file-text" class="w-5 h-5"></i>
                                         <span>View All Attachments & Documents</span>
                                     </a>
