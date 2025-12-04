@@ -719,13 +719,52 @@
             tryNextUrl();
         }
         
+        // Helper function to copy text with fallback
+        const copyToClipboard = (text) => {
+            // Try modern Clipboard API first
+            if (navigator.clipboard?.writeText) {
+                return navigator.clipboard.writeText(text).catch(() => {
+                    // Fallback to execCommand if Clipboard API fails
+                    return fallbackCopyToClipboard(text);
+                });
+            } else {
+                // Use fallback method directly
+                return Promise.resolve(fallbackCopyToClipboard(text));
+            }
+        };
+        
+        // Fallback method using execCommand
+        const fallbackCopyToClipboard = (text) => {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-999999px';
+            textArea.style.top = '-999999px';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+                // eslint-disable-next-line deprecation/deprecation
+                const successful = document.execCommand('copy');
+                textArea.remove();
+                if (!successful) {
+                    throw new Error('execCommand copy failed');
+                }
+                return Promise.resolve();
+            } catch (err) {
+                textArea.remove();
+                return Promise.reject(err);
+            }
+        };
+        
         // Setup copy functionality
         const copyUpiBtn = document.getElementById('copy-upi');
         const copyBankBtn = document.getElementById('copy-bank');
         
-        if (copyUpiBtn && payment.upi) {
+        if (copyUpiBtn && payment?.upi) {
             copyUpiBtn.addEventListener('click', () => {
-                navigator.clipboard.writeText(payment.upi).then(() => {
+                copyToClipboard(payment.upi).then(() => {
                     const originalText = copyUpiBtn.innerHTML;
                     copyUpiBtn.innerHTML = '<i data-lucide="check" class="w-4 h-4"></i><span>Copied!</span>';
                     setTimeout(() => {
@@ -733,6 +772,9 @@
                         if (typeof lucide !== 'undefined') lucide.createIcons();
                     }, 2000);
                     if (typeof lucide !== 'undefined') lucide.createIcons();
+                }).catch(() => {
+                    // Show text in alert if copy fails
+                    alert('Please copy manually: ' + payment.upi);
                 });
             });
         }
@@ -740,7 +782,7 @@
         if (copyBankBtn) {
             copyBankBtn.addEventListener('click', () => {
                 const bankDetails = `Account Holder: ${payment.bankAccount.name}\nAccount Number: ${payment.bankAccount.number}\nIFSC: ${payment.bankAccount.ifsc}\nBank: ${payment.bankAccount.bankName}`;
-                navigator.clipboard.writeText(bankDetails).then(() => {
+                copyToClipboard(bankDetails).then(() => {
                     const originalText = copyBankBtn.innerHTML;
                     copyBankBtn.innerHTML = '<i data-lucide="check" class="w-4 h-4"></i><span>Copied!</span>';
                     setTimeout(() => {
@@ -748,6 +790,9 @@
                         if (typeof lucide !== 'undefined') lucide.createIcons();
                     }, 2000);
                     if (typeof lucide !== 'undefined') lucide.createIcons();
+                }).catch(() => {
+                    // Show text in alert if copy fails
+                    alert('Please copy manually:\n\n' + bankDetails);
                 });
             });
         }
