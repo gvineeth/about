@@ -154,7 +154,7 @@
         about: {
             greeting: decode('SGVsbG8hIEknbSBWaW5lZXQgR29ya2FudGku'),
             para1: decode('SSBhbSBhbiBleHBlcmllbmNlZCBTb2Z0d2FyZSBEZXZlbG9wZXIgc3BlY2lhbGl6aW5nIGluIGZ1bGwtc3RhY2sgYXBwbGljYXRpb24gZGV2ZWxvcG1lbnQsIHdpdGggYSBmb2N1cyBvbiBKYXZhL1NwcmluZyBCb290IGZvciB0aGUgYmFja2VuZCBhbmQgQW5ndWxhciBmb3IgZHluYW1pYyB1c2VyIGludGVyZmFjZXMuIE15IGNvcmUgZXhwZXJ0aXNlIGxpZXMgaW4gYnVpbGRpbmcgZWZmaWNpZW50LCBzY2FsYWJsZSBzb2Z0d2FyZSBzb2x1dGlvbnMgYnkgYXBwbHlpbmcgc3Ryb25nIHByb2JsZW0tc29sdmluZyBza2lsbHMsIERhdGEgU3RydWN0dXJlcywgYW5kIEFsZ29yaXRobXMu'),
-            para2: decode('Q3VycmVudGx5LCBJIGNvbnRyaWJ1dGUgdG8gZW50ZXJwcmlzZSBiYW5raW5nIHNvbHV0aW9ucyBhdCBJbnRlbGxlY3QgRGVzaWduIEFyZW5hLCBkZXZlbG9waW5nIGJhY2sgb2ZmaWNlIHNvZnR3YXJlIGFuZCBrZXkgYmFua2luZyBtb2R1bGVzIGZvciBjbGllbnRzIGxpa2UgSUNJQ0kgYW5kIEhERkMuIEkgYW0gcGFzc2lvbmF0ZSBhYm91dCBkcml2aW5nIHByb2R1Y3Rpdml0eSBhbmQgaW5ub3ZhdGlvbiB0aHJvdWdoIGF1dG9tYXRpb24gYW5kIGNsZWFuIGNvZGUu')
+            para2: decode('Q3VycmVudGx5LCBJIGNvbnRyaWJ1dGUgdG8gZW50ZXJwcmlzZSBiYW5raW5nIHNvbHV0aW9ucyBhdCBJbnRlbGxlY3QgRGVzaWduIEFyZW5hLCBkZXZlbG9waW5nIGJhY2sgb2ZmaWNlIHNvZnR3YXJlIGFuZCBrZXkgYmFua2luZyBtb2R1bGVzIGZvciBjbGllbnRzIGxpa2UgSUNJQ0kgYW5kIEJhcmNsYXlzLiBJIGFtIHBhc3Npb25hdGUgYWJvdXQgZHJpdmluZyBwcm9kdWN0aXZpdHkgYW5kIGlubm92YXRpb24gdGhyb3VnaCBhdXRvbWF0aW9uIGFuZCBjbGVhbiBjb2RlLg==')
         },
         stats: [
             { icon: 'briefcase', value: '3.5+', label: decode('WWVhcnMgRXhwZXJpZW5jZQ==') },
@@ -221,7 +221,7 @@
                 { name: 'IntelliJ / VS Code', percent: 85 },
                 { name: 'Postman / Android Studio', percent: 75 }
             ],
-            soft: ['Problem Solving', 'Data Structures', 'Algorithms', 'Software Productivity', 'Efficient Code Development', 'Driving Impactful Results']
+            soft: ['Problem Solving', 'Data Structures', 'Algorithms', 'Software Productivity', 'Efficient Code Development', 'Driving Impactful Results', 'Time Management', 'Teamwork', 'Communication', 'Leadership', 'Adaptability', 'Encryption & Decryption', 'Stock Market Analysis']
         },
         projects: [
             {
@@ -242,7 +242,7 @@
             {
                 title: decode('QmFua2luZyBCYWNrIE9mZmljZSBNb2R1bGVz'),
                 tech: 'Java, Spring Boot, Angular, Clarity Design',
-                description: decode('RGV2ZWxvcCBiYWNrIG9mZmljZSBzb2Z0d2FyZSBhbmQgdXNlciBpbnRlcmZhY2UgZm9yIGJhbmtzIHN1Y2ggYXMgSUNJQ0ksIEhERkMsIFNCQyBhbmQgQVhJUy4gSW1wbGVtZW50IHZhcmlvdXMgYmFua2luZyBtb2R1bGVzIGluY2x1ZGluZyBBbGVydHMsIFJlcG9ydHMsIENoYXJnZXMsIFZpcnR1YWwgQWNjb3VudHM=')
+                description: decode('RGV2ZWxvcCBiYWNrIG9mZmljZSBzb2Z0d2FyZSBhbmQgdXNlciBpbnRlcmZhY2UgZm9yIGJhbmtzIHN1Y2ggYXMgSUNJQ0ksIEJhcmNsYXlzLCBTQkMgYW5kIEFYSVMuIEltcGxlbWVudCB2YXJpb3VzIGJhbmtpbmcgbW9kdWxlcyBpbmNsdWRpbmcgQWxlcnRzLCBSZXBvcnRzLCBDaGFyZ2VzLCBWaXJ0dWFsIEFjY291bnRz')
             }
         ],
         attachments: {
