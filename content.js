@@ -201,27 +201,42 @@
         ],
         skills: {
             frontend: [
+                { name: 'React', percent: 80 },
                 { name: 'Angular', percent: 85 },
-                { name: 'HTML / CSS / JS', percent: 80 },
-                { name: 'Bootstrap / Material', percent: 75 },
+                { name: 'HTML/CSS/JavaScript', percent: 80 },
+                { name: 'Bootstrap/Material UI', percent: 75 },
                 { name: 'Clarity Design', percent: 87 },
+                { name: 'Android Studio', percent: 70 },
                 { name: 'Linux', percent: 70 }
             ],
             backend: [
                 { name: 'Java', percent: 72 },
                 { name: 'Python', percent: 80 },
                 { name: 'Spring Boot', percent: 68 },
+                { name: 'SQL', percent: 75 },
                 { name: 'Shell Script', percent: 65 },
-                { name: 'Core Concepts (OOPs, OS, DBMS)', percent: 75 }
+                { name: 'Concepts (OOPs, OS, DBMS)', percent: 75 },
+                { name: 'REST APIs', percent: 75 }
             ],
             tools: [
-                { name: 'MySQL / Oracle / Postgres', percent: 72 },
+                { name: 'MySQL/Oracle/PostgreSQL', percent: 72 },
                 { name: 'Firebase', percent: 70 },
-                { name: 'Git / Jira / Confluence', percent: 90 },
-                { name: 'IntelliJ / VS Code', percent: 85 },
-                { name: 'Postman / Android Studio', percent: 75 }
+                { name: 'Git/Jira/Confluence', percent: 90 },
+                { name: 'IntelliJ/VS Code/Cursor', percent: 85 },
+                { name: 'Postman', percent: 75 },
+                { name: 'Excel', percent: 70 },
+                { name: 'Gmail API', percent: 75 }
             ],
-            soft: ['Problem Solving', 'Data Structures', 'Algorithms', 'Software Productivity', 'Efficient Code Development', 'Driving Impactful Results', 'Time Management', 'Teamwork', 'Communication', 'Leadership', 'Adaptability', 'Encryption & Decryption', 'Stock Market Analysis']
+            devops: [
+                { name: 'CI/CD', percent: 75 },
+                { name: 'Docker', percent: 70 },
+                { name: 'Kubernetes', percent: 65 },
+                { name: 'Jenkins', percent: 70 },
+                { name: 'AWS/Azure/GCP', percent: 66 },
+                { name: 'SonarQube', percent: 70 },
+                { name: 'Github/GitLab', percent: 85 }
+            ],
+            soft: ['Problem Solving', 'Data Structures', 'Algorithms', 'Analysis of Algorithms', 'Object-Oriented Programming (OOPs)', 'Operating System (OS)', 'Database Management System (DBMS)', 'Design Patterns', 'AI', 'Software Development Life Cycle (SDLC)', 'Software Productivity', 'Efficient Code Development', 'Driving Impactful Results', 'Time Management', 'Teamwork', 'Communication', 'Analytical Skills', 'Self-starter', 'Leadership', 'Adaptability', 'New Ideas & Concepts', 'Technologies', 'Encryption & Decryption', 'Stock Market Analysis']
         },
         projects: [
             {
@@ -367,7 +382,7 @@
                             <i data-lucide="code" class="w-8 h-8 text-indigo-600 mr-3"></i>
                             Skills & Expertise
                         </h2>
-                        <div id="expertise-container" class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12"></div>
+                        <div id="expertise-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12"></div>
                         <div class="animate-on-scroll fade-in-up bg-white p-6 rounded-xl border border-gray-200 shadow-md hover-lift">
                             <h3 class="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2 flex items-center">
                                 <i data-lucide="layers" class="w-5 h-5 mr-2 text-indigo-600"></i> Core Concepts & Strengths
@@ -389,12 +404,22 @@
                         </h2>
                         <div class="max-w-4xl mx-auto">
                             <p id="attachments-description" class="text-center text-gray-600 mb-8 animate-on-scroll fade-in-up"></p>
-                            <div class="animate-on-scroll scale-in bg-white p-8 rounded-xl border border-gray-200 shadow-md hover-lift">
-                                <div class="text-center">
-                                    <a id="attachments-main-link" href="" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center space-x-3 bg-indigo-600 text-white font-semibold px-8 py-4 rounded-xl hover:bg-indigo-700 transition shadow-lg hover:shadow-xl transform hover:scale-105">
-                                        <i data-lucide="file-text" class="w-5 h-5"></i>
-                                        <span>View All Attachments & Documents</span>
-                                    </a>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div class="animate-on-scroll scale-in bg-white p-8 rounded-xl border border-gray-200 shadow-md hover-lift">
+                                    <div class="text-center">
+                                        <a href="resume.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center space-x-3 bg-indigo-600 text-white font-semibold px-8 py-4 rounded-xl hover:bg-indigo-700 transition shadow-lg hover:shadow-xl transform hover:scale-105 w-full">
+                                            <i data-lucide="file-text" class="w-5 h-5"></i>
+                                            <span>View Resume</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="animate-on-scroll scale-in bg-white p-8 rounded-xl border border-gray-200 shadow-md hover-lift">
+                                    <div class="text-center">
+                                        <a id="attachments-main-link" href="" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center space-x-3 bg-indigo-600 text-white font-semibold px-8 py-4 rounded-xl hover:bg-indigo-700 transition shadow-lg hover:shadow-xl transform hover:scale-105 w-full">
+                                            <i data-lucide="folder" class="w-5 h-5"></i>
+                                            <span>View All Attachments</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -557,7 +582,8 @@
         const skillColumns = [
             { title: 'Frontend & Frameworks', skills: contentData.skills.frontend, anim: 'slide-in-left stagger-1' },
             { title: 'Backend & Languages', skills: contentData.skills.backend, anim: 'fade-in-up stagger-2' },
-            { title: 'Data & DevOps Tools', skills: contentData.skills.tools, anim: 'slide-in-right stagger-3' }
+            { title: 'DevOps & Cloud', skills: contentData.skills.devops, anim: 'fade-in-up stagger-3' },
+            { title: 'Tools & Databases', skills: contentData.skills.tools, anim: 'slide-in-right stagger-4' }
         ];
         
         skillColumns.forEach(col => {
