@@ -378,8 +378,21 @@
                 margin: 0,
                 filename: 'Vineetkumar_Gorkanti_Resume.pdf',
                 image: { type: 'jpeg', quality: 1 },
-                html2canvas: { scale: 3, useCORS: true, scrollY: 0, letterRendering: true },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                html2canvas: { 
+                    scale: 2, 
+                    useCORS: true, 
+                    scrollY: 0, 
+                    letterRendering: false,
+                    logging: false,
+                    // windowWidth: 794, // A4 width in pixels at 96 DPI
+                    // windowHeight: 1123 // A4 height in pixels at 96 DPI
+                },
+                jsPDF: { 
+                    unit: 'mm', 
+                    format: 'a4', 
+                    orientation: 'portrait',
+                    compress: true
+                }
             };
             
             const btn = event.target.closest('button');
